@@ -23,7 +23,7 @@ You've now created a deployment-ready Rails application with a blog, an API, and
 10. Add [validations](https://guides.rubyonrails.org/active_record_validations.html#validation-helpers) to your [Post model](https://github.com/leastbad/optimism-demo/blob/master/app/models/post.rb).
 11. Now for the "hard" part: you have to make some additions to your [posts form partial](https://github.com/leastbad/optimism-demo/blob/master/app/views/posts/_form.html.erb):
 
-- **remove** `local: true` from the first line; it's vitally important that your form is submitting via Ajax
+- remove `local: true` from the first line; it's vitally important that your form is submitting via Ajax
 - remove the error display template code (which is roughly lines 2-12)
 - add one empty `span` tag below each input element you're validating. You will set the span's id using the provided `error_id_for` helper
 
