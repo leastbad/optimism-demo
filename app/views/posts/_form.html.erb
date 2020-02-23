@@ -1,0 +1,29 @@
+<%= form_with(model: post) do |form| %>
+  <div class="field" id="<%= form.container_id_for :name %>">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <span id="<%= form.error_id_for :name %>" class="text-danger d-none"></span>
+  </div>
+
+  <div class="field" id="<%= form.container_id_for :age %>">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+    <span id="<%= form.error_id_for :age %>" class="text-danger d-none"></span>
+  </div>
+
+  <div class="field" id="<%= form.container_id_for :body %>">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+    <span id="<%= form.error_id_for :body %>" class="text-danger d-none"></span>
+  </div>
+
+  <div class="field" id="<%= form.container_id_for :consent %>">
+    <%= form.label :consent %>
+    <%= form.check_box :consent %>
+    <span id="<%= form.error_id_for :consent %>" class="text-danger d-none"></span>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
