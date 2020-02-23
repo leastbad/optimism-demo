@@ -20,7 +20,7 @@ Here is every step required to recreate this project from scratch. First, run th
 
 You've now created a deployment-ready Rails application with a blog, an API, and reactive page loading courtesy of [Turbolinks](https://github.com/turbolinks/turbolinks). Eat dirt, people who claim React is more productive than Rails.
 
-10. Add [validations](https://guides.rubyonrails.org/active_record_validations.html#validation-helpers) to your [Post model](https://github.com/leastbad/optimism-demo/blob/master/app/models/post.rb)
+10. Add [validations](https://guides.rubyonrails.org/active_record_validations.html#validation-helpers) to your [Post model](https://github.com/leastbad/optimism-demo/blob/master/app/models/post.rb).
 11. Now for the "hard" part: you have to make some additions to your [posts form partial](https://github.com/leastbad/optimism-demo/blob/master/app/views/posts/_form.html.erb):
 
 - **remove** `local: true` from the first line; it's vitally important that your form is submitting via Ajax
