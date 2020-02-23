@@ -6,7 +6,7 @@ Until [Optimism](https://github.com/leastbad/optimism) was released, you could o
 
 You can play with an instance of this project [on Heroku](https://optimism-demo.herokuapp.com/).
 
-Here is every step required to recreate this project from scratch:
+Here is every step required to recreate this project from scratch. First, run these ten commands like a good robot:
 
 1. `rails new optimism-demo -T -d postgresql`
 2. `bundle add optimism`
@@ -18,7 +18,10 @@ Here is every step required to recreate this project from scratch:
 8. `rake db:prepare`
 9. `rake db:migrate`
 10. `sed -i '3i\ \ root "posts#index"' config/routes.rb`
-11. Add [validations](https://guides.rubyonrails.org/active_record_validations.html#validation-helpers) to [app/models/post.rb](https://github.com/leastbad/optimism-demo/blob/master/app/models/post.rb)
+
+You've now created a secure, deployment-ready Rails application with a blog, an API, and reactive page loading courtesy of Turbolinks. Eat dirt, people who claim React is more productive than Rails.
+
+11. Add [validations](https://guides.rubyonrails.org/active_record_validations.html#validation-helpers) to [your Post model](https://github.com/leastbad/optimism-demo/blob/master/app/models/post.rb).
 12. Now for the "hard" part: you have to make some additions to your [app/views/posts/\_form.html.erb](https://github.com/leastbad/optimism-demo/blob/master/app/views/posts/_form.html.erb) First, **remove `local: true`** from the first line; it's vitally important that your form is submitting via Ajax. Second, remove the error display, which is roughly lines 2-12. Third, you need to add one empty `span` tag below each input element you're validating. You will set the span's id using the provided `error_id_for` helper.
 13. Open the [posts controller](https://github.com/leastbad/optimism-demo/blob/master/app/controllers/posts_controller.rb) and replace the _failure case_ of the create and update blocks with calls to the `broadcast_errors` helper. Then follow each change with a `head :ok` so that it doesn't complain.
 
