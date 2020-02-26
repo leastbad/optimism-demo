@@ -14,15 +14,15 @@
  *= require_self
  */
 
-.text-danger {
+.danger {
   color: red;
 }
 
-.d-none {
+.hide {
   display: none;
 }
 
-.field.error > .d-none {
+.field.error > .hide {
   display: block !important;
 }
 
@@ -31,7 +31,7 @@
   background-color: rgba(255, 239, 213, 0.7);
 }
 
-// included for folks using Bootstrap
+// included for folks using Bootstrap:
 .form-group.error > .d-none {
   display: inline !important;
 }

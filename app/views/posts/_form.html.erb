@@ -1,27 +1,27 @@
 <%= form_with(model: post) do |form| %>
-  <div class="field" id="<%= form.container_id_for :name %>">
+  <%= form.container_for :name, class: "field" do %>
     <%= form.label :name %>
     <%= form.text_field :name %>
-    <span id="<%= form.error_id_for :name %>" class="text-danger d-none"></span>
-  </div>
+    <%= form.error_for :name, class: "danger hide" %>
+  <% end %>
 
-  <div class="field" id="<%= form.container_id_for :age %>">
+  <%= form.container_for :age, class: "field" do %>
     <%= form.label :age %>
     <%= form.number_field :age %>
-    <span id="<%= form.error_id_for :age %>" class="text-danger d-none"></span>
-  </div>
+    <%= form.error_for :age, class: "danger hide" %>
+  <% end %>
 
-  <div class="field" id="<%= form.container_id_for :body %>">
+  <%= form.container_for :body, class: "field" do %>
     <%= form.label :body %>
     <%= form.text_area :body %>
-    <span id="<%= form.error_id_for :body %>" class="text-danger d-none"></span>
-  </div>
+    <%= form.error_for :body, class: "danger hide" %>
+  <% end %>
 
-  <div class="field" id="<%= form.container_id_for :consent %>">
+  <%= form.container_for :consent, class: "field" do %>
     <%= form.label :consent %>
     <%= form.check_box :consent %>
-    <span id="<%= form.error_id_for :consent %>" class="text-danger d-none"></span>
-  </div>
+    <%= form.error_for :consent, class: "danger hide" %>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>
