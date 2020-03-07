@@ -93,12 +93,12 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
-    optimism (0.2.8)
+    optimism (0.2.10)
       cable_ready (~> 4.0.9)
       rack
       rails (>= 5.2)
     pg (1.2.2)
-    puma (4.3.1)
+    puma (4.3.3)
       nio4r (~> 2.0)
     rack (2.2.2)
     rack-proxy (0.6.5)
@@ -188,9 +188,9 @@ DEPENDENCIES
   byebug
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
-  optimism (= 0.2.8)
+  optimism (= 0.2.10)
   pg (>= 0.18, < 2.0)
-  puma (~> 4.1)
+  puma (~> 4.3.3)
   rails (~> 6.0.2, >= 6.0.2.1)
   redis (~> 4.0)
   sass-rails (>= 6)
@@ -205,4 +205,4 @@ RUBY VERSION
    ruby 2.6.5p114
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
