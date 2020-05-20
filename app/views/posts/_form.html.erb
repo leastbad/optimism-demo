@@ -23,6 +23,22 @@
     <%= form.error_for :consent, class: "danger hide" %>
   <% end %>
 
+  <h3>Nested Comments</h3>
+
+  <%= form.fields_for :comments, post.comments do |comment_form| %>
+    <%= comment_form.container_for :opinion, class: "field" do %>
+      <%= comment_form.hidden_field :id %>
+      <%= comment_form.label :opinion %>
+      <%= comment_form.text_field :opinion %>
+      <%= comment_form.error_for :opinion, class: "danger hide" %>
+      <% unless comment_form.object.new_record? %>
+        <%= comment_form.check_box :_destroy %> Delete
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <br>
+
   <div class="actions">
     <%= form.submit %>
   </div>
