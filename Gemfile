@@ -19,7 +19,7 @@ gem 'turbolinks', '~> 5'
 gem "redis", ">= 4.0", :require => ["redis", "redis/connection/hiredis"]
 gem "hiredis"
 
-gem "optimism"
+gem "optimism", '>= 0.3.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
