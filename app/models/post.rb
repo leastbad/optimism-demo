@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   validates :body, length: {minimum: 10}
   validates :consent, acceptance: {message: "must be given"}
 
-  has_many :comments
+  has_many :comments, dependent: :destroy
   accepts_nested_attributes_for :comments,
     allow_destroy: true, 
     reject_if: proc { |attr| attr[:opinion].blank? }
