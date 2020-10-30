@@ -3,7 +3,7 @@ module ApplicationCable
     identified_by :session_id
 
     def connect
-      self.session_id = cookies.encrypted[:session_id]
+      self.session_id = request.session.id
     end
   end
 end
