@@ -1,4 +1,4 @@
-<%= form_with(model: post) do |form| %>
+<%= form_with(model: post, local: false) do |form| %>
   <%= form.container_for :name, class: "field" do %>
     <%= form.label :name %>
     <%= form.text_field :name %>
